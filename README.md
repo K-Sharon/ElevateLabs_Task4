@@ -34,10 +34,25 @@ The dataset contains features computed from digitized images of fine needle aspi
   - **ROC-AUC Score** (Area under the ROC curve)
   - **ROC Curve** plot to visualize performance across thresholds
 
-### 5. Visualize the Sigmoid Function
-- Plotted the **Sigmoid Function**, which converts the linear model output (z) into probabilities between 0 and 1.
-- Explained how threshold tuning affects classification decisions.
+#### 🔄 Sigmoid Function
 
+The **sigmoid function** is used in Logistic Regression to map predicted values to probabilities between 0 and 1. It transforms the output of the linear model into a probability score.
+
+\[
+\sigma(z) = \frac{1}{1 + e^{-z}}
+\]
+
+- \( z \) is the linear combination of features: \( z = w_1x_1 + w_2x_2 + ... + w_nx_n + b \)
+- The output \( \sigma(z) \) represents the probability that a given input belongs to the **positive class** (e.g., malignant tumor)
+
+#### ⚖️ Threshold Tuning
+
+- By default, Logistic Regression uses a threshold of **0.5**:
+  - If predicted probability ≥ 0.5 → class 1 (Malignant)
+  - If predicted probability < 0.5 → class 0 (Benign)
+- The threshold can be **adjusted** to:
+  - Increase **sensitivity/recall** (detect more positives)
+  - Reduce **false positives** or **false negatives**
 ---
 
 ## Interpretation
